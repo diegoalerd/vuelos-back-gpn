@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { configValidationSchema } from './config/config.shema';
+import { CqrsModule } from '@nestjs/cqrs';
+import { flyghtAdapter } from './infraestructure/adapter/flyght.adapter';
+import { flightModule } from './infraestructure/flyght.Module';
 
 @Module({
   imports: [
@@ -9,7 +12,8 @@ import { configValidationSchema } from './config/config.shema';
       envFilePath: [`.env`],
       validationSchema: configValidationSchema,
     }),
-    //TypeOrmModule.forFeature([EmployeerRepository]),
+    CqrsModule,
+    TypeOrmModule.forFeature([flyghtAdapter]),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -31,7 +35,7 @@ import { configValidationSchema } from './config/config.shema';
         };
       },
     }),
-    //EmployeerModule,
+    flightModule,
   ],
   controllers: [],
   providers: [],
