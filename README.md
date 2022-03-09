@@ -7,7 +7,7 @@
 
 ## Diagrama de Arquitectura 
 
-<img src="./images/UML - Página 11.jpg"/>
+<img src="./src/images/UML-Página11.jpg"/>
 
 ## Description
 
