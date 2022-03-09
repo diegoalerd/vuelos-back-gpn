@@ -9,14 +9,33 @@
 
 <img src="./src/images/UML-Página11.jpg"/>
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Modelo entidad relación
 
-## Installation
+<img src="./src/images/UML-Página11.png"/>
 
-```bash
-$ npm install
+### 📋Pre-requisitos
+
+- [Node.js](https://nodejs.org/es/) - Entorno de ejecución para javascript.dominio (ddd).
+- [Git](https://git-scm.com) - Manejador de versiones.
+
+## 🔧Instalación
+
+Primeramente, se procede a clonar el repositorio
+
+```
+git clone https://github.com/TeamTron2021/gigandjob-backend.git
+```
+
+Luego, se procede a ubicar en la siguiente ruta del procyecto
+
+```
+cd gigandjob-backend
+```
+Instalamos los módulos necesarios
+
+```
+npm install
 ```
 
 ## Running the app
